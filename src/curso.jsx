@@ -7,7 +7,6 @@ const Curso = () => (
     <>
     <Card1/>
     <Card2/>
-    <Card3/>
     </>
 )
 

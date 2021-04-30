@@ -1,31 +1,29 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-=======
 import React  from 'react'
-import Curso from './curso'
+
+import Card3 from './card3'
 import './styles/styles.scss'
+
+const cursos =[
+  {"title":"muerte por electocutación",
+  "image":"https://parecidas.com/img_es/tag/thumb/5a/29986.jpg",
+  "imagePerson":"https://www.fundacionkonex.org/custom/web/data/imagenes/repositorio/2017/05/22/13015/201705220242232a44bdf3d593dff49862a4549f4e88a7.jpg",
+  "person":"lic. O'Donell",
+  "price" :"15.000 §"
+    
+  }, 
+    {"title":"muerte por difamación",
+  "image":"https://abogado.la/wp-content/uploads/2020/11/demanda-por-difamacion-en-california.jpg",
+  "imagePerson":"https://lh3.googleusercontent.com/proxy/JIyL5D-U3vK-OKrnABGZ-_xX6qtkGqoZwSHv4yLWXT40Q3SHten8B0sjjzRu9tT14ZyUPI8v9ZPk5owRiQDUeU-8VTSf4LaiI20l6bzf8xc_5xyAUnJwejQ9v3ZuibQZmOikkDPYqMcHVF8",
+  "person":"Lic. zlotogwiazda",
+  "price" :"350 §"
+  }, {
+    "title":"muerte accidental",
+ "image":"https://www.abogados.com/sites/default/files/styles/_750px_x_500px_/public/wp-content/uploads/worker2-01.jpg?itok=GEsDfATP",
+ "imagePerson":"https://pbs.twimg.com/profile_images/653558348273569792/joxg8DZD_400x400.png",
+ "person":"lic. Macri",
+ "price" :"5.000 §"
+  }
+]
 
 const App = ( ) => (
     <>
@@ -42,13 +40,20 @@ const App = ( ) => (
   </div>
 </div>
 <div className="ed-grid m-grid-3">
- <Curso/>
- 
+
+ {
+   cursos.map( curso => <Card3
+    title={curso.title}
+    image={curso.image}
+    imagePerson={curso.imagePerson}
+    person={curso.person}
+    price={curso.price}/>)
+ }
+  <Card3 />
  </div> 
 </>
 
 )
  
->>>>>>> 333f2a0865c54435edd8a3ff6c6d9ce38e0933f7
 
 export default App;

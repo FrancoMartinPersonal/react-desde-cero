@@ -3,6 +3,7 @@ import React from 'react'
 const Card2 = () => (
    
     <article className="card">
+      {30 + 30}
       <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
         <img src="https://abogado.la/wp-content/uploads/2020/11/demanda-por-difamacion-en-california.jpg" alt="muerte por electrocutación"/>
       </div>
